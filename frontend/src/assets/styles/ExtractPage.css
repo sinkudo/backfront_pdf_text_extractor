@@ -1,0 +1,91 @@
+/* Основные стили */
+.extractor-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.extractor-main {
+  flex: 1;
+  padding: 20px 0;
+}
+
+/* Форма загрузки */
+.pdf-upload-label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.file-selected {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+/* Блок с результатом */
+.result-pre {
+  white-space: pre-wrap;
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 4px;
+  max-height: 500px;
+  overflow-y: auto;
+  display: block;
+  word-break: break-word;
+  font-family: inherit;
+  margin: 0;
+  border: 1px solid #dee2e6;
+}
+
+.result-pre::-webkit-scrollbar {
+  width: 8px;
+}
+
+.result-pre::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.result-pre::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.result-pre::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Кнопки */
+.buttons-container {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .result-pre {
+    max-height: 300px;
+  }
+  
+  .buttons-container {
+    flex-direction: column;
+  }
+}
+
+/* Темная тема */
+[data-bs-theme="dark"] .result-pre {
+  background: #2d3748;
+  color: #f8f9fa;
+  border-color: #495057;
+}
+
+[data-bs-theme="dark"] .result-pre::-webkit-scrollbar-track {
+  background: #4a5568;
+}
+
+[data-bs-theme="dark"] .result-pre::-webkit-scrollbar-thumb {
+  background: #718096;
+}
